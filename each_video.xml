@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/videoCon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </View>
+
+    <ImageView
+        android:id="@+id/heartImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:srcCompat="@drawable/baseline_favorite_border_40"
+        app:layout_constraintBottom_toTopOf="@id/tagImageView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/tagImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:srcCompat="@drawable/baseline_bookmark_border_40"
+        app:layout_constraintBottom_toTopOf="@id/chatImageView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/chatImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:srcCompat="@drawable/baseline_chat_40"
+        app:layout_constraintBottom_toTopOf="@id/foodsearchImageView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/foodsearchImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:srcCompat="@drawable/foodsearch"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="10dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/gradient">
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="Title"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/video_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="TextView"
+            android:textColor="#DCD1D1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/video_title" />
+
+        <TextView
+            android:id="@+id/video_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="TextView"
+            android:textColor="#DCD1D1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/video_address" />
+
+        <TextView
+            android:id="@+id/video_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/video_date" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:src="@drawable/selfpic"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/video_price"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="追蹤"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/layout_bkg_5"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginHorizontal="12dp"
+            android:elevation="2dp"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="@+id/profile_image"
+            app:layout_constraintBottom_toBottomOf="@id/profile_image"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/gradient2">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            android:text="查看內文"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            android:src="@drawable/arrowup"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/foodsearchImageView"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
